@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #647df9;
+  padding: 5rem;
+}
+.wrapper {
+  max-width: 1090px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+}
+.wrapper .table {
+  background: #fff;
+  width: calc(33% - 20px);
+  padding: 30px;
+  position: relative;
+}
+@media screen and (max-width: 1020px){
+    .wrapper .table{
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 698px){
+    .wrapper .table{
+    width: 100%; 
+    }
+}
+.table .price-section {
+  display: flex;
+  justify-content: center;
+}
+
+.table .price-section .price-area {
+  width: 120px;
+  height: 120px;
+  /* background: #ffd861; */
+  border-radius: 50%;
+  padding: 2px;
+}
+.price-area .inner-area {
+  height: 100%;
+  width: 100%;
+  /* background: #ffd861; */
+  border-radius: 50%;
+  border: 3px solid #fff;
+  color: #fff;
+  line-height: 117px;
+  text-align: center;
+  position: relative;
+}
+.price-area .inner-area .text {
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  top: -10px;
+  left: 17px;
+}
+.price-area .inner-area .price {
+  font-size: 45px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.table .package-name {
+  width: 1005;
+  height: 2px;
+  background: #ffecb3;
+  margin: 35px 0;
+  position: relative;
+  /* background: red; */
+}
+.table .package-name::before {
+  position: absolute;
+  content: "Basic";
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 0 15px;
+  transform: translate(-50%, -50%);
+}
+.table .features li{
+    margin: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.features li .list-name{
+    font-size: 17px;
+    font-weight: 400;
+}
+.features li .icon.check{
+    color: #2db94d;
+    font-size: 25px;
+}
+.features li .icon.cross{
+    color: #cd3241;
+    font-size: 25px;
+}
+.table .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.table .btn button{
+    width: 80%;
+    height: 50px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    /* background: #ffd861; */
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.table .btn button:hover{
+    border-radius: 5px;
+}
+.table ::selection{
+    color: #fff;
+}
+.basic ::selection,
+.basic .price-area,
+.basic .inner-area{
+    background: #ffd861;
+}
+.basic .btn button{
+    background: #fff;
+    color: #ffd861;
+    border: 2px solid #ffd861;
+}
+.basic .btn button:hover{
+    color: #fff;
+    background: #ffd861;
+}
+.premium ::selection,
+.premium .price-area,
+.premium .inner-area,
+.premium .btn button{
+    background: #a26bfa;
+}
+.ultimate ::selection,
+.ultimate .price-area,
+.ultimate .inner-area{
+    background: #43ef8b;
+}
+.ultimate .btn button{
+    background: #fff;
+    color: #43ef8b;
+    border: 2px solid #43ef8b;
+}
+
+.ultimate .btn button:hover{
+    color: #fff;
+    background: #43ef8b;
+}
+.basic .package-name{
+    background: #ffecb3;
+}
+.premium .package-name{
+    background: #d0b3ff;
+}
+.ultimate .package-name{
+    background: #baf8d4;
+}
+.basic .package-name::before {
+    content: 'basic';
+}
+.premium .package-name::before {
+    content: 'premium';
+}
+.ultimate .package-name::before {
+    content: 'ultimate';
+}
+
+.table .ribbon{
+    height: 150px;
+    width: 150px;
+    /* background: red; */
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+}
+.table .ribbon::before,
+.table .ribbon::after{
+    position: absolute;
+    content: "";
+    display: block;
+    z-index: 1;
+    border: 7px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.table .ribbon::before{
+    top: 0px;
+    right: 15px;
+}
+.table .ribbon::after{
+    bottom:15px;
+    left: 0px;
+}
+
+.table .ribbon span{
+    position: absolute;
+    background: #a26bfa;
+    width: 200px;
+    padding: 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
